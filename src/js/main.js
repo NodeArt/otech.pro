@@ -32,11 +32,16 @@
             },
             submitHandler: function() {
                 let form_data = $(this.currentForm).serializeArray();
+                var form = new FormData();
+                form_data.forEach(function (item){
+                    form.append(item.name, item.value);
+                });
+
                 $.ajax({
                     url: '/sendMail',
                     method: 'POST',
                     dataType: 'json',
-                    data: form_data,
+                    data: form,
                     success: function (response) {
                         let text = '',
                             notify_class = '';
