@@ -60,7 +60,7 @@
                     if (response.data ===  "ok") {
                         text = 'Сообщение успешно отправлено!';
                         notify_class = 'success';
-                        $(this.currentForm).reset();
+                        $('form.form-contact')[0].reset();
                     } else {
                         text =  'Сообщение не отправлено!';
                         notify_class = 'error';
