@@ -1,0 +1,6 @@
+{
+    "name": "pc/optitech.loc",
+    "require": {
+        "phpmailer/phpmailer": "^6.2"
+    }
+}
