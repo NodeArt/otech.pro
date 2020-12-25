@@ -36,18 +36,27 @@
                 form_data.forEach(function (item){
                     form.append(item.name, item.value);
                 });
+
+
                 var settings = {
+                    "async": true,
+                    "crossDomain": true,
                     "url": "/sendMail",
                     "method": "POST",
+                    "headers": {
+                        "cache-control": "no-cache",
+                        "postman-token": "00b950ee-b354-8360-72e1-c8b9f70bfad9"
+                    },
+                    "processData": false,
+                    "contentType": false,
                     "mimeType": "multipart/form-data",
                     "data": form
                 }
 
                 $.ajax(settings).done(function (response) {
-
                     let text = '',
                         notify_class = '';
-                    if (response.data !== undefined) {
+                    if (response.statusText ===  "success") {
                         text = 'Сообщение успешно отправлено!';
                         notify_class = 'success';
                     } else {
