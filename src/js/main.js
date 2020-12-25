@@ -36,30 +36,32 @@
                 form_data.forEach(function (item){
                     form.append(item.name, item.value);
                 });
+                var settings = {
+                    "url": "/sendMail",
+                    "method": "POST",
+                    "mimeType": "multipart/form-data",
+                    "data": form
+                }
 
-                $.ajax({
-                    url: '/sendMail',
-                    method: 'POST',
-                    dataType: 'json',
-                    data: form,
-                    success: function (response) {
-                        let text = '',
-                            notify_class = '';
-                        if (response.data !== undefined) {
-                            text = 'Сообщение успешно отправлено!';
-                            notify_class = 'success';
-                        } else {
-                            text =  'Сообщение не отправлено!';
-                            notify_class = 'error';
-                        }
-                        $('.form-contact').append('<div id="email_notify" class="'+ notify_class +'">'+ text +'!</div>')
-                        setTimeout(function () {
-                            $('#email_notify').fadeOut(500, function () {
-                                $(this).remove();
-                            });
-                        }, 4000)
+                $.ajax(settings).done(function (response) {
+
+                    let text = '',
+                        notify_class = '';
+                    if (response.data !== undefined) {
+                        text = 'Сообщение успешно отправлено!';
+                        notify_class = 'success';
+                    } else {
+                        text =  'Сообщение не отправлено!';
+                        notify_class = 'error';
                     }
-                })
+                    $('.form-contact').append('<div id="email_notify" class="'+ notify_class +'">'+ text +'!</div>')
+                    setTimeout(function () {
+                        $('#email_notify').fadeOut(500, function () {
+                            $(this).remove();
+                        });
+                    }, 4000)
+                });
+                return false;
             }
         });
 
