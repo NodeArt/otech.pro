@@ -49,6 +49,7 @@
                     },
                     "processData": false,
                     "contentType": false,
+                    "dataType": "json",
                     "mimeType": "multipart/form-data",
                     "data": form
                 }
@@ -56,7 +57,7 @@
                 $.ajax(settings).done(function (response) {
                     let text = '',
                         notify_class = '';
-                    if (response.statusText ===  "success") {
+                    if (response.data ===  "ok") {
                         text = 'Сообщение успешно отправлено!';
                         notify_class = 'success';
                     } else {
