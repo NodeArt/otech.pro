@@ -70,6 +70,26 @@ body {
 				color: $color-text-black;
 			}
 		}
+
+		.slick-dots li {
+			&:hover {
+				&:before {
+					background-image: url('./images/arrow_black.svg');
+					transform: rotate(180deg) translateY(50%);
+				}
+			}
+		}
+	}
+
+	&.white {
+		.on-main {
+			&:hover {
+				&:before {
+					background-image: url('./images/arrow-red.svg');
+					transform: rotate(180deg) translateY(50%);
+				}
+			}
+		}
 	}
 }
 
@@ -955,6 +975,12 @@ body {
 				animation: none;
 			}
 		}
+
+		&:hover {
+			&:before {
+				background-image: url('./images/arrow-red.svg');
+			}
+		}
 	}
 }
 
@@ -1016,6 +1042,13 @@ fieldset {
 
 		&:focus {
 			border-bottom: 1px solid $color-text-black;
+
+			&::-webkit-input-placeholder,
+			&:-ms-input-placeholder,
+			&::-ms-input-placeholder,
+			&::placeholder {
+				opacity: 0;
+			}
 		}
 	}
 }

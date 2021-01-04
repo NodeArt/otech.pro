@@ -108,22 +108,28 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
+                speed: 1000,
                 arrows: false,
-                vertical: true,
-                verticalScrolling: true,
-                verticalSwiping: true,
                 customPaging: function (slider, i) {
                     return '0' + i;
                 },
             });
 
+            var scrollCount = null;
+            var scroll= null;
+
             slider.on('wheel', (function (e) {
                 e.preventDefault();
 
+                clearTimeout(scroll);
+                scroll = setTimeout(function(){scrollCount=0;}, 300);
+                if(scrollCount) return 0;
+                scrollCount=1;
+
                 if (e.originalEvent.deltaY < 0) {
-                    $(this).slick('slickPrev');
-                } else {
                     $(this).slick('slickNext');
+                } else {
+                    $(this).slick('slickPrev');
                 }
             }));
 
