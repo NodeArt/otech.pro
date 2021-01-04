@@ -126,7 +126,7 @@
                 if(scrollCount) return 0;
                 scrollCount=1;
 
-                if (e.originalEvent.deltaY < 0) {
+                if (e.originalEvent.deltaY > 0) {
                     $(this).slick('slickNext');
                 } else {
                     $(this).slick('slickPrev');
