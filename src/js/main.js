@@ -122,7 +122,7 @@
                 e.preventDefault();
 
                 clearTimeout(scroll);
-                scroll = setTimeout(function(){scrollCount=0;}, 300);
+                scroll = setTimeout(function(){scrollCount=0;}, 200);
                 if(scrollCount) return 0;
                 scrollCount=1;
 
