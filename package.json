@@ -20,7 +20,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-html-bem-validator": "^1.0.5",
-    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont": "^11.0.0",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^3.2.0",
