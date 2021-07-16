@@ -30,7 +30,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-terser": "^2.0.1",
     "gulp-uglify-es": "^2.0.0",
-    "gulp-w3c-html-validator": "^3.0.0"
+    "gulp-w3c-html-validator": "^5.0.1"
   },
   "dependencies": {}
 }
