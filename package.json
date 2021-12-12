@@ -13,8 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.12",
-    "gulp": "^4.0.2",
     "firebase-tools": "^9.3.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
@@ -27,10 +27,10 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
     "gulp-terser": "^2.0.1",
     "gulp-uglify-es": "^2.0.0",
-    "gulp-w3c-html-validator": "^5.1.0"
-  },
-  "dependencies": {}
+    "gulp-w3c-html-validator": "^5.1.0",
+    "sass": "^1.45.0"
+  }
 }

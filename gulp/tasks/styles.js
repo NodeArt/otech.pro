@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'));
 const group_media = require('gulp-group-css-media-queries')
 const autoprefixer = require('gulp-autoprefixer')
 const clean_css = require('gulp-clean-css')
