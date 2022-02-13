@@ -16,7 +16,7 @@
   "dependencies": {
     "busboy": "^1.4.0",
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.17.2",
+    "firebase-functions": "^3.18.0",
     "multiparty": "^4.2.3",
     "nodemailer": "^6.7.2"
   },
